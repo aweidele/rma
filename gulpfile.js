@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
+var gcmq = require('gulp-group-css-media-queries');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -34,6 +35,7 @@ gulp.task('sass', function(){
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(gcmq())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(pxtorem())
     .pipe(gulp.dest('assets/css/'))
