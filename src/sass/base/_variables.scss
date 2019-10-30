@@ -1,6 +1,17 @@
 $mxW: 1240px;
 $gutter: 20px;
 
+$white: #FFFFFF;
+$black: #111111;
+
 $primary: #202020;
 $secondary: #636569;
 $accent: #FF2020;
+
+$mediaXs: "screen and (max-width: 375px)";
+$mediaPhone: "screen and (max-width: 767.9px)";
+$mediaTablet: "screen and (min-width: 768px)";
+$mediaTabletOnly: "screen and (min-width: 768px) and (max-width: 1024.9px)";
+$mediaToggleHeader: "screen and (max-width: 1024.9px)";
+$mediaDesktop: "screen and (min-width: 1025px)";
+$mediaFull: "screen and (min-width: #{$mxW})";
