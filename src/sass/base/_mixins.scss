@@ -1,0 +1,12 @@
+@mixin contentWidth {
+  max-width: $mxW;
+  margin: auto;
+  padding: 0 $gutter;
+}
+
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
