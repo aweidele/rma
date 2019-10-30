@@ -50,20 +50,24 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('iconfont', function(){
+gulp.task('ico', function(){
   gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
-      fontName: 'petel_glyphs',
-      targetPath: '../src/sass/_icons.scss',
-      fontPath: '../fonts/'
+      fontName: 'rma-icons',
+      targetPath: '../../src/_blah.scss',
+      fontPath: '../fonts/',
+      cssClass: 'ic'
     }))
     .pipe(iconfont({
-      fontName: 'rethink_glyphs',
+      fontName: 'rma-icons',
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
       normalize:true,
       fontHeight: 1001
      }))
-    .pipe(gulp.dest('fonts/'));
+    .pipe(gulp.dest('assets/fonts/'));
 });
+
+gulp.task('iconfont', ['ico', 'sass']);
 
 
 gulp.task('watch', function(){

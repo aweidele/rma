@@ -30,8 +30,8 @@
   <header>
     <div>
       <h1><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
-      <input type="checkbox" id="nav-primary-toggle" class="menu-toggle sr-only" checked>
-      <label for="nav-primary-toggle" class="toggle-trigger">Menu</label>
+      <input type="checkbox" id="nav-primary-toggle" class="menu-toggle sr-only">
+      <label for="nav-primary-toggle" class="toggle-trigger"><span class="ic ic-bars"></span>Menu</label>
       <div class="overlay">
         <label for="nav-primary-toggle" class="toggle-trigger">Close</label>
         <nav class="nav-primary">

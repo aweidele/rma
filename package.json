@@ -20,7 +20,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont": "^10.0.2",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-pxtorem": "^3.0.0",
     "gulp-rename": "^1.2.2",

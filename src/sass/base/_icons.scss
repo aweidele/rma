@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "rma-icons";
+	src: url('../assets/fonts/rma-icons.eot');
+	src: url('../assets/fonts/rma-icons.eot?#iefix') format('eot'),
+		url('../assets/fonts/rma-icons.woff2') format('woff2'),
+		url('../assets/fonts/rma-icons.woff') format('woff'),
+		url('../assets/fonts/rma-icons.ttf') format('truetype'),
+		url('../assets/fonts/rma-icons.svg#rma-icons') format('svg');
+}
+
+.ic:before {
+	font-family: "rma-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.ic-bars:before {
+	content: "\E001";
+}
