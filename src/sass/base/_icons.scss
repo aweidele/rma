@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "rma-icons";
-	src: url('../assets/fonts/rma-icons.eot');
-	src: url('../assets/fonts/rma-icons.eot?#iefix') format('eot'),
-		url('../assets/fonts/rma-icons.woff2') format('woff2'),
-		url('../assets/fonts/rma-icons.woff') format('woff'),
-		url('../assets/fonts/rma-icons.ttf') format('truetype'),
-		url('../assets/fonts/rma-icons.svg#rma-icons') format('svg');
+	src: url('../fonts/rma-icons.eot');
+	src: url('../fonts/rma-icons.eot?#iefix') format('eot'),
+		url('../fonts/rma-icons.woff2') format('woff2'),
+		url('../fonts/rma-icons.woff') format('woff'),
+		url('../fonts/rma-icons.ttf') format('truetype'),
+		url('../fonts/rma-icons.svg#rma-icons') format('svg');
 }
 
 .ic:before {
@@ -23,4 +23,8 @@
 
 .ic-bars:before {
 	content: "\E001";
+}
+
+.ic-close:before {
+	content: "\E002";
 }

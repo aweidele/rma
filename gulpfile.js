@@ -51,10 +51,11 @@ gulp.task('compress', function() {
 });
 
 gulp.task('ico', function(){
-  gulp.src(['src/icons/*.svg'])
+  console.log(process.cwd());
+  gulp.src(['src/icons/*.svg'], {base: './'})
     .pipe(iconfontCss({
       fontName: 'rma-icons',
-      targetPath: '../../src/_blah.scss',
+      targetPath: '../../src/sass/base/_icons.scss',
       fontPath: '../fonts/',
       cssClass: 'ic'
     }))

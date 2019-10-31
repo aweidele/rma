@@ -33,7 +33,7 @@
       <input type="checkbox" id="nav-primary-toggle" class="menu-toggle sr-only">
       <label for="nav-primary-toggle" class="toggle-trigger"><span class="ic ic-bars"></span>Menu</label>
       <div class="overlay">
-        <label for="nav-primary-toggle" class="toggle-trigger">Close</label>
+        <label for="nav-primary-toggle" class="toggle-trigger"><span class="ic ic-close"></span>Close</label>
         <nav class="nav-primary">
         <?php
           wp_nav_menu(
