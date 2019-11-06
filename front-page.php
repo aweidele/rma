@@ -13,5 +13,4 @@ $content = get_fields();
     </div>
   </div>
 </main>
-<pre><?php print_r($content); ?></pre>
 <?php get_footer(); ?>

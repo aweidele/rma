@@ -62,6 +62,7 @@
     font-weight: bold;
     text-shadow: 0px 0px 2px $black;
     transition: all .25s;
+    //padding: $gutter / 2 0;
 
     @media #{$mediaTablet} {
       font-size: 28px;
@@ -80,33 +81,33 @@
   @media #{$mediaTablet} {
     &.tl {
       > div {
-        top: 0;
-        left: 0;
-        transform-origin: top left;
+        top: $gutter / 4;
+        left: $gutter / 4;
+        transform-origin: left center;
       }
     }
 
     &.bl {
       > div {
-        bottom: 0;
-        left: 0;
-        transform-origin: bottom left;
+        bottom: $gutter / 4;
+        left: $gutter / 4;
+        transform-origin: left center;
       }
     }
 
     &.tr {
       > div {
-        top: 0;
-        right: 0;
-        transform-origin: top right;
+        top: $gutter / 4;
+        right: $gutter / 4;
+        transform-origin: right center;
       }
     }
 
     &.br {
       > div {
-        bottom: 0;
-        right: 0;
-        transform-origin: bottom right;
+        bottom: $gutter / 4;
+        right: $gutter / 4;
+        transform-origin: right center;
       }
     }
 
