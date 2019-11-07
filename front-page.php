@@ -1,7 +1,7 @@
 <?php
-$content = get_fields();
+  $content = get_fields();
+  get_header();
 ?>
-<?php get_header(); ?>
 <main>
   <div>
     <div class="hp-grid">
