@@ -28,6 +28,17 @@ add_image_size( 'dw', 1180, 400, true );
 add_image_size( 'dt', 570, 720, true );
 add_image_size( 'dwdt', 1180, 720, true );
 
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Company Info',
+		'menu_title'	=> 'Company Info',
+		'menu_slug' 	=> 'company-info',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+
 function rma_img($img,$size) {
   $w = $size.'-width';
   $h = $size.'-height';
