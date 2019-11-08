@@ -15,9 +15,11 @@
       </div>
       <div>
         <?php
+        if( is_array($content['right_content']) ) {
           foreach($content['right_content'] as $block) {
             include 'callouts/'.$block['acf_fc_layout'].'.php';
           }
+        }
         ?>
       </div>
     </div>
