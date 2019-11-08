@@ -1,0 +1,1 @@
+!function(n){n(".staff-list").length&&n(".staff-list").each(function(){n("a",this).on("click",function(a){a.preventDefault();var o=n(this).prop("href")+" .main-content";n("body").addClass("dialog-loading"),n("#dialog .dialog-content").load(o,function(){n("body").removeClass("dialog-loading").addClass("dialog-open")})})})}(jQuery);
