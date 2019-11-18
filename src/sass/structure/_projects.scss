@@ -1,3 +1,7 @@
+.project-list {
+
+}
+
 .project-images {
   img {
     width: 100%;
@@ -33,7 +37,7 @@
 }
 
 
-.projects {
+.project-detail {
   // main {
   //   display: flex;
   //   flex-direction: column-reverse;
@@ -72,6 +76,38 @@
       @media #{$mediaDesktop} {
         width: 50%;
         flex-grow: 0;
+      }
+    }
+  }
+}
+
+.project-archive {
+  main {
+    nav {
+      font-size: 14px;
+
+      li {
+        margin-bottom: .2em;
+
+        &:last-child {
+          margin-top: 2em;
+        }
+      }
+
+      a {
+        color: $secondary;
+
+        @include hover {
+          color: $accent;
+        }
+
+        &.active {
+          color: $accent;
+          font-weight: bold;
+
+          @include hover {
+          }
+        }
       }
     }
   }

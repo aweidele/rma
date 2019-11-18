@@ -15,14 +15,22 @@
   wp_head();
 
   // Adding body classes
-  $body_classes = [get_post_type()];
-  if( is_front_page() ) {
-    $body_classes[] = "front_page";
-  }
-  $body_classes[] = $post->post_name;
-  if( is_user_logged_in() ) {
-    $body_classes[] = "loggedin";
-  }
+    $body_classes = [get_post_type()];
+    if( is_front_page() ) {
+      $body_classes[] = "front_page";
+    }
+    $body_classes[] = $post->post_name;
+    if( is_user_logged_in() ) {
+      $body_classes[] = "loggedin";
+    }
+    // Project Archive
+    if ( is_post_type_archive('projects') || is_tax('industry') ) {
+      $body_classes[] = "project-archive";
+    }
+    // Single project
+    if ( is_singular('projects') ) {
+      $body_classes[] = 'project-detail';
+    }
 ?>
 </head>
 <body class="<?=implode($body_classes, " ")?>">

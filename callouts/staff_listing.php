@@ -1,4 +1,4 @@
-<div class="staff-list">
+<div class="staff-list listing-grid">
   <?php
   $staff = get_posts(['post_type'=>'staff', 'posts_per_page'=>-1]);
   foreach($staff as $s) {
