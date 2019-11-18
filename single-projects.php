@@ -1,12 +1,35 @@
 <?php
   $content = get_fields();
   get_header();
+
+  $project_list = get_posts([
+    'post_type' => 'projects',
+    'posts_per_page' => -1,
+    'order_by' => 'menu_order'
+  ]);
+
+  foreach($project_list as $key => $proj) {
+    if ($post->ID == $proj->ID) {
+      $current = $key;
+      break;
+    }
+  }
+
+  $prev = $current - 1;
+  if($prev < 0) {
+    $prev = sizeof($project_list) - 1;
+  }
+
+  $next = $current + 1;
+  if($next >= sizeof($project_list)) {
+    $next = 0;
+  }
 ?>
 <main>
   <div>
     <nav>
-      <a href="#">< Previous Project</a>
-      <a href="#">Next Project ></a>
+      <a href="<?php echo get_permalink($project_list[$prev]->ID); ?>">< Previous Project</a>
+      <a href="<?php echo get_permalink($project_list[$next]->ID); ?>">Next Project ></a>
     </nav>
   </div>
   <div>
