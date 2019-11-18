@@ -7,6 +7,8 @@
 }
 
 .main-content {
+  color: $secondary;
+
   @media #{$mediaTablet} {
     display: flex;
 

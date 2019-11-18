@@ -29,6 +29,8 @@ add_image_size( 'dt', 570, 720, true );
 add_image_size( 'dwdt', 1180, 720, true );
 add_image_size( 'grid', 500, 350, true );
 add_image_size( 'portrait', 508, 768, true );
+add_image_size( 'main', 990, 999999, false );
+add_image_size( 'main-half', 495, 999999, false );
 
 if( function_exists('acf_add_options_page') ) {
 
@@ -82,6 +84,26 @@ function custom_post_type() {
 				'slug' => 'project'),
 		);
 		register_post_type( 'projects', $args );
+
+    register_taxonomy(
+      'industry',
+      'projects',
+      array(
+          'labels' => array(
+              'name'              => _x( 'Industries' , 'taxonomy general name' ),
+              'singular_name'     => _x( 'Industry' , 'taxonomy singular name'),
+              'add_new_item' => 'Add Industry',
+              'new_item_name' => "New Industry"
+          ),
+          'show_ui' => true,
+          'show_admin_column' => true,
+          'show_tagcloud' => false,
+          'hierarchical' => true,
+          'support' => array('tags'),
+          'rewrite' => array(
+            'slug' => 'projects/industry'),
+      )
+    );
 
     // Projects
   	$labels = array(

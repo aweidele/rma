@@ -1,0 +1,78 @@
+.project-images {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  figure {
+    padding-bottom: 24px;
+  }
+
+  figcaption {
+    font-size: 9px;
+    line-height: (11 / 9) * 1em;
+    margin-top: 1em;
+    color: $secondary;
+  }
+
+  @media #{$mediaTablet} {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -#{$gutter / 4};
+
+    figure {
+      width: 50%;
+      padding: $gutter / 4 $gutter / 4 24px $gutter / 4;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.projects {
+  // main {
+  //   display: flex;
+  //   flex-direction: column-reverse;
+  // }
+
+  main {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+
+      a {
+        color: $secondary;
+        text-decoration: none;
+
+        @include hover {
+          color: $accent;
+          text-decoration: underline;
+        }
+      }
+
+      @media #{$mediaTablet} {
+        :first-child {
+          transform: translateX(-14px);
+        }
+
+        :last-child {
+          transform: translateX(14px);
+        }
+      }
+    }
+  }
+
+  .main-content {
+    > div:last-child {
+      @media #{$mediaDesktop} {
+        width: 50%;
+        flex-grow: 0;
+      }
+    }
+  }
+}
