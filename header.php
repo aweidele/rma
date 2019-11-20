@@ -39,9 +39,15 @@
     <div>
       <h1><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
       <input type="checkbox" id="nav-primary-toggle" class="menu-toggle sr-only">
-      <label for="nav-primary-toggle" class="toggle-trigger"><span class="ic ic-bars"></span>Menu</label>
+      <label for="nav-primary-toggle" class="toggle-trigger">
+        <span class="ic ic-bars"></span>
+        <span class="sr-only">Menu</span>
+      </label>
       <div class="overlay">
-        <label for="nav-primary-toggle" class="toggle-trigger"><span class="ic ic-close"></span>Close</label>
+        <label for="nav-primary-toggle" class="toggle-trigger">
+          <span class="ic ic-close"></span>
+          <span class="sr-only">Close</span>
+        </label>
         <nav class="nav-primary">
         <?php
           wp_nav_menu(

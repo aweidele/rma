@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
   }
 
   h1 {
@@ -47,10 +48,16 @@
     }
 
     .toggle-trigger {
+      height: 45px;
+      width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
-      top: 50px;
-      right: 10px;
+      top: 0px;
+      right: 0px;
       color: $white;
+      font-size: 24px;
     }
   }
 

@@ -1,5 +1,6 @@
 .contact-info {
   font-size: 12px;
+  margin-bottom: 2em;
 
   a {
     color: $secondary;
@@ -11,5 +12,12 @@
 
   li.address {
     margin-bottom: 1em;
+  }
+}
+
+
+.contact {
+  iframe {
+    width: 100%;
   }
 }
