@@ -12,4 +12,5 @@
       });
     });
   }
+  new Tablesort(document.getElementById('projectTable'));
 })(jQuery);

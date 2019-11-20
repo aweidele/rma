@@ -58,6 +58,10 @@
       right: 0px;
       color: $white;
       font-size: 24px;
+
+      @media #{$mediaTablet} {
+        display: none;
+      }
     }
   }
 
