@@ -57,7 +57,7 @@
         <div class="article-list listing-table">
           <table id="projectTable">
             <thead>
-              <th tabindex="0"><div>Project</div></th>
+              <th tabindex="0" aria-sort="ascending"><div>Project</div></th>
               <th tabindex="0"><div>Client</div></th>
               <th tabindex="0" data-sort-method='number'><div>Date</div></th>
             </thead>

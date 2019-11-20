@@ -11,6 +11,11 @@ h2, .h2 {
   ~ .h2 {
     margin-top: 3em;
   }
+
+  small {
+    font-weight: normal;
+    font-size: 11px;
+  }
 }
 
 h1, .h1 {
@@ -30,7 +35,7 @@ h1, .h1 {
 }
 
 p {
-  font-size: 10px;
+  font-size: 11px;
   margin: 1em 0;
   line-height: 1.4em;
 }
