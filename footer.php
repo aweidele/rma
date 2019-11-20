@@ -19,7 +19,7 @@
                 $address = get_field('address', 'option');
             ?>
             <li>
-              <a href="https://www.google.com/maps/place/<?php echo str_replace(' ','+',$address); ?>" target="_blank">
+              <a href="https://www.google.com/maps/place/<?php echo str_replace([' ',"\r\n"],'+',$address); ?>" target="_blank">
                 <?php echo $address; ?>
               </a>
             </li>

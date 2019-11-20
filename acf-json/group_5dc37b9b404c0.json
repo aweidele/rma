@@ -25,7 +25,7 @@
             "key": "field_5dc37bce3f18b",
             "label": "Address",
             "name": "address",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,9 +36,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5dc37bfd3f18c",
@@ -114,5 +114,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573092514
+    "modified": 1574216903
 }

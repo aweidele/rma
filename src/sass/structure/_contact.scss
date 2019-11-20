@@ -1,0 +1,15 @@
+.contact-info {
+  font-size: 12px;
+
+  a {
+    color: $secondary;
+
+    @include hover {
+      color: $accent;
+    }
+  }
+
+  li.address {
+    margin-bottom: 1em;
+  }
+}
