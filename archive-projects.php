@@ -17,6 +17,7 @@
         <h2>Selected Projects</h2>
         <nav class="tax-list">
           <ul>
+            <li><a href="<?php echo get_post_type_archive_link('projects'); ?>">All</a></li>
             <?php foreach($terms as $term) { ?>
               <li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
             <?php } ?>
