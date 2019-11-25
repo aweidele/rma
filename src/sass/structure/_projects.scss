@@ -111,11 +111,11 @@
   @media #{$mediaTablet} {
     display: flex;
     flex-flow: row wrap;
-    margin: -#{$gutter / 4};
+    margin: -#{$gutter / 2};
 
     figure {
       width: 50%;
-      padding: $gutter / 4 $gutter / 4 24px $gutter / 4;
+      padding: $gutter / 2;
 
       &:first-child {
         width: 100%;
