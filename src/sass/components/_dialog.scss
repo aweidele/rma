@@ -4,13 +4,84 @@
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
+  //pointer-events: none;
   //align-items: center;
   overflow: auto;
   z-index: 9999;
   display: none;
 
   .dialog-open & {
-    display: block;
+    display: flex;
+    align-items: center;
+    //justify-content: center;
   }
+
+  .dialog-inner {
+    width: 100%;
+    margin: auto;
+    max-width: 512px;
+    background: $white;
+    padding: $gutter;
+    border: 1px solid $primary;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .cw & {
+    .main-content {
+      > div {
+        &:first-child {
+          width: 50%;
+          flex: 0 0 50%;
+        }
+        &:last-child {
+          width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    border: 1px solid $primary;
+    width: 24px;
+    height: 24px;
+    color: $primary;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: $gutter / 2;
+    padding: 0;
+
+    &:before,
+    &:after {
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      content: "";
+      background: $primary;
+
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.dialog-inner {
+
 }

@@ -87,6 +87,25 @@
             "min": 1900,
             "max": 2200,
             "step": ""
+        },
+        {
+            "key": "field_5ddb3f4eada58",
+            "label": "Appear in Grid?",
+            "name": "appear_in_grid",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -106,5 +125,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574219152
+    "modified": 1574649718
 }

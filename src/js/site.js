@@ -11,6 +11,10 @@
         });
       });
     });
+
+    $('#dialog button').on('click',function() {
+      $('body').removeClass('dialog-open');
+    });
   }
   new Tablesort(document.getElementById('projectTable'));
 })(jQuery);
