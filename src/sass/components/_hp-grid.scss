@@ -1,7 +1,7 @@
-.hp-grid {
+.hp-grid,
+.interior-grid  {
   @media #{$mediaTablet} {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
     grid-auto-flow: dense;
     grid-gap: $gutter / 2;
@@ -13,10 +13,6 @@
     @media #{$mediaTablet} {
       margin: 0;
     }
-  }
-
-  @media #{$mediaDesktop} {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   > .dw {
@@ -116,5 +112,15 @@
         //transform: rotate(90deg);
       }
     }
+  }
+}
+
+.hp-grid {
+  @media #{$mediaTablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media #{$mediaDesktop} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

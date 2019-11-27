@@ -24,6 +24,99 @@
                     "sub_fields": [],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ddec2f4310b1": {
+                    "key": "layout_5ddec2f4310b1",
+                    "name": "grid",
+                    "label": "Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ddec311310b2",
+                            "label": "Blocks",
+                            "name": "grid_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_5ddec49e3b639": {
+                                    "key": "layout_5ddec49e3b639",
+                                    "name": "hp-image",
+                                    "label": "Image",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5ddec60168412",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "clone": [
+                                                "field_5dc08663ad47a",
+                                                "field_5dc086b3ad47d"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_5ddec78b5c246": {
+                                    "key": "layout_5ddec78b5c246",
+                                    "name": "blurb",
+                                    "label": "Blurb",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5ddec79a5c247",
+                                            "label": "Blurb",
+                                            "name": "blurb",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "clone": [
+                                                "field_5dc22ddab6d8e",
+                                                "field_5dc086b3ad47d"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Row",
+                            "min": "",
+                            "max": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -58,5 +151,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574216673
+    "modified": 1574881848
 }

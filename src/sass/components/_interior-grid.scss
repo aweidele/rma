@@ -1,0 +1,9 @@
+.interior-grid {
+  @media #{$mediaTablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media #{$mediaDesktop} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
