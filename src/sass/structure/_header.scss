@@ -39,6 +39,7 @@
       transition: all .25s;
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
     @media #{$mediaTablet} {
       flex-grow: 1;
@@ -73,12 +74,15 @@
 }
 
 .nav-primary {
-  flex-grow: 1;
   @media #{$mediaPhone} {
     > div,
     ul {
       height: 100%;
     }
+  }
+
+  @media #{$mediaTablet} {
+    flex-grow: 1;
   }
 
   ul {

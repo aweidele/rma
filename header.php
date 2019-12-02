@@ -56,6 +56,11 @@
             )
           ); ?>
           </nav>
+          <?php
+            if ( is_active_sidebar( 'header-widget' ) ) :
+              dynamic_sidebar( 'header-widget' );
+            endif;
+          ?>
         </div>
     </div>
   </header>

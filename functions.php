@@ -162,3 +162,14 @@ function rma_img($img,$size) {
   $r .= '>';
   return $r;
 }
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Header',
+    'id'            => 'header-widget',
+    'before_widget' => '<div class = "header_widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
