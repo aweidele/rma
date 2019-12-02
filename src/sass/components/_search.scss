@@ -18,3 +18,40 @@
     }
   }
 }
+
+.search-results {
+  @media #{$mediaDesktop} {
+    width: 80%;
+    margin: auto;
+  }
+  h2 {
+    margin-bottom: 3em;
+  }
+
+  article {
+    margin-bottom: 2em;
+    padding: 0 1em 1em;
+    border-bottom: 1px solid $primary;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  a {
+    color: $primary;
+
+    @include hover {
+      color: $accent;
+    }
+  }
+
+  .type {
+    font-size: 10px;
+    color: $secondary;
+  }
+}
