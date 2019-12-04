@@ -17,7 +17,7 @@
         <h2>Selected Projects</h2>
         <nav class="tax-list">
           <ul>
-            <li><a href="<?php echo get_post_type_archive_link('projects'); ?>">All</a></li>
+            <li><a href="<?php echo get_post_type_archive_link('projects'); ?>" class="active">All</a></li>
             <?php foreach($terms as $term) { ?>
               <li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
             <?php } ?>
@@ -61,9 +61,17 @@
               <th tabindex="0" aria-sort="ascending"><div>Project</div></th>
               <th tabindex="0"><div>Client</div></th>
               <th tabindex="0" data-sort-method='number'><div>Date</div></th>
+              <th tabindex="0"><div>Sector</div></th>
             </thead>
             <tbody>
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <?php
+              if ( have_posts() ) : while ( have_posts() ) : the_post();
+              $sector = get_the_terms($post->ID,'industry');
+              $sectorNames = [];
+              foreach($sector as $s) {
+                $sectorNames[] = $s->name;
+              }
+            ?>
               <tr>
                 <td>
                   <a href="<?php echo get_permalink(); ?>">
@@ -73,6 +81,7 @@
                 </td>
                 <td><?php echo get_field('client'); ?></td>
                 <td><?php echo get_field('date'); ?></td>
+                <td><?php echo implode(', ',$sectorNames); ?></td>
               </tr>
             <?php
               endwhile;
