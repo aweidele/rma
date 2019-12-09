@@ -14,10 +14,12 @@
     color: $white;
     text-shadow: 0px 0px 2px $black;
     background: $gray1;
+    overflow: hidden;
 
     @include hover {
       img {
         opacity: .5;
+        transform: scale(1.1);
       }
     }
   }

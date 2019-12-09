@@ -48,6 +48,7 @@
 .menu-link {
   position: relative;
   background: $gray1;
+  overflow: hidden;
 
   > div {
     position: absolute;
@@ -68,9 +69,7 @@
   @include hover {
     img {
       opacity: .5;
-    }
-    > div {
-      //opacity: .7;
+      transform: scale(1.1);
     }
   }
 
