@@ -121,6 +121,12 @@
       }
     }
   }
+
+  .current-menu-item a {
+    @media #{$mediaTablet} {
+      color: $accent;
+    }
+  }
 }
 
 .toggle-trigger {
