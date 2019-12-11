@@ -37,13 +37,15 @@
       <div>
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
+          $sector = get_the_terms($post->ID,'industry');
         ?>
           <h2>
             <?php the_title(); ?>
             <small><?php echo $content['location']; ?></small>
           </h2>
+        <?php the_content(); ?>
+        <pre><?php print_r($sector); ?></pre>
         <?php
-            the_content();
           endwhile;
           endif;
         ?>
