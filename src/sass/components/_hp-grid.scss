@@ -7,7 +7,8 @@
     grid-gap: $gutter / 2;
   }
 
-  > div {
+  > div,
+  a {
     margin-bottom: $gutter / 2;
 
     @media #{$mediaTablet} {
@@ -60,7 +61,12 @@
     font-weight: bold;
     text-shadow: 0px 0px 2px $black;
     transition: all .25s;
-    //padding: $gutter / 2 0;
+
+    @media #{$mediaPhone} {
+      bottom: 0;
+      left: 0;
+      padding: $gutter / 2;
+    }
 
     @media #{$mediaTablet} {
       font-size: 28px;
