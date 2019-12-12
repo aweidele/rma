@@ -29,9 +29,7 @@
                 $phone = get_field('phone', 'option');
             ?>
             <li>
-              <a href="tel:<?php echo str_replace($phone_replace, '', $phone); ?>">
                 <?php echo $phone; ?> t
-              </a>
             </li>
             <?php } ?>
             <?php
@@ -39,9 +37,7 @@
                 $fax = get_field('fax', 'option');
             ?>
             <li>
-              <a href="tel:<?php echo str_replace($phone_replace, '', $fax); ?>">
                 <?php echo $fax; ?> f
-              </a>
             </li>
             <?php } ?>
             <?php if(get_field('email', 'option')) { ?>
