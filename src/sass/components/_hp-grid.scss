@@ -79,7 +79,7 @@
       > div {
         top: $gutter / 4;
         left: $gutter / 4;
-        transform-origin: left center;
+        transform-origin: left top;
       }
     }
 
@@ -87,7 +87,7 @@
       > div {
         bottom: $gutter / 4;
         left: $gutter / 4;
-        transform-origin: left center;
+        transform-origin: left bottom;
       }
     }
 
@@ -95,7 +95,7 @@
       > div {
         top: $gutter / 4;
         right: $gutter / 4;
-        transform-origin: right center;
+        transform-origin: right top;
       }
     }
 
@@ -103,13 +103,30 @@
       > div {
         bottom: $gutter / 4;
         right: $gutter / 4;
-        transform-origin: right center;
+        transform-origin: right bottom;
       }
     }
 
-    &.hor {
-      > div {
-        //transform: rotate(90deg);
+    &.ver {
+      &.tl {
+        > div {
+          transform: rotate(-90deg) translateX(-100%);
+        }
+      }
+      &.bl {
+        > div {
+          transform: rotate(-90deg) translateY(100%);
+        }
+      }
+      &.tr {
+        > div {
+          transform: rotate(90deg) translateX(100%);
+        }
+      }
+      &.br {
+        > div {
+          transform: rotate(90deg) translateY(100%);
+        }
       }
     }
   }
