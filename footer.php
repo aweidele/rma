@@ -30,7 +30,7 @@
             ?>
             <li>
               <a href="tel:<?php echo str_replace($phone_replace, '', $phone); ?>">
-                <?php echo $phone; ?>
+                <?php echo $phone; ?> t
               </a>
             </li>
             <?php } ?>
@@ -40,7 +40,7 @@
             ?>
             <li>
               <a href="tel:<?php echo str_replace($phone_replace, '', $fax); ?>">
-                <?php echo $fax; ?>
+                <?php echo $fax; ?> f
               </a>
             </li>
             <?php } ?>
