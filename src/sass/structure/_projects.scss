@@ -200,3 +200,29 @@
     }
   }
 }
+
+.see-also {
+  ul {
+    font-size: 14px;
+
+    li {
+      margin-bottom: .2em;
+    }
+
+    a {
+      color: $secondary;
+
+      @include hover {
+        color: $accent;
+      }
+
+      &.active {
+        color: $accent;
+        font-weight: bold;
+
+        @include hover {
+        }
+      }
+    }
+  }
+}

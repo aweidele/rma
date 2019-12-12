@@ -27,7 +27,7 @@
                 ?>
                   <a href="<?php echo $href[0]; ?>">Project Grid</a>
                 <?php } else { ?>
-                  <a href="?layout=table">Full Project List</a>
+                  <a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a>
                 <?php } ?>
               </li>
           </ul>

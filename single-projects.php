@@ -44,7 +44,21 @@
             <small><?php echo $content['location']; ?></small>
           </h2>
         <?php the_content(); ?>
-        <pre><?php print_r($sector); ?></pre>
+          <div class="see-also">
+            <h3>See Also</h3>
+            <ul>
+            <?php
+              if(sizeof($sector)) {
+                foreach($sector as $s) {
+            ?>
+              <li><a href="<?php echo get_term_link($s->term_id); ?>"><?php echo $s->name; ?></a></li>
+            <?php
+                }
+              }
+            ?>
+              <li><a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a></li>
+            </ul>
+          </div>
         <?php
           endwhile;
           endif;
