@@ -31,7 +31,7 @@
     "gulp-group-css-media-queries": "^1.2.2"
   },
   "dependencies": {
-    "npm": "^6.1.0",
+    "npm": "^6.13.4",
     "owl.carousel": "^2.3.4",
     "tablesort": "^5.1.0"
   }
