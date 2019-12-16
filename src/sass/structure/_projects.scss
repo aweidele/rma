@@ -34,11 +34,11 @@
 
     div {
       display: flex;
-      justify-content: space-between;
+      //justify-content: space-between;
       align-items: center;
       padding-right: $gutter;
 
-      &:after {
+      &:before {
         width: 0;
         height: 0;
         border-style: solid;
@@ -48,6 +48,7 @@
         opacity: .5;
         transition: all .25s;
         transform: rotate(180deg);
+        margin-right: $gutter / 4;
       }
     }
 

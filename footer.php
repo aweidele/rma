@@ -7,13 +7,13 @@
       <div>
         <div>
           <ul>
-            <li class="company-name"><a href="<?php echo get_home_url(); ?>"><?php
+            <li class="company-name"><?php
               if(get_field('company_name', 'option')) {
                 the_field('company_name', 'option');
               } else {
                 echo get_bloginfo('name');
               }
-            ?></a></li>
+            ?></li>
             <?php
               if(get_field('address', 'option')) {
                 $address = get_field('address', 'option');

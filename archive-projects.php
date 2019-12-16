@@ -38,10 +38,20 @@
               $id = $post->ID;
               $content = get_fields($id);
               $image = $content['images'][0];
+              $title = [];
+              if ($content['client']) {
+                $title[] = $content['client'];
+              }
+              $title[] = get_the_title();
+              if ($content['location']) {
+                $title[] = $content['location'];
+              }
           ?>
             <article>
               <a href="<?php echo get_permalink(); ?>">
-                <h2><?php the_title(); ?></h2>
+                <h2>
+                  <?php echo implode($title,'<br>'); ?>
+                </h2>
                 <figure><?php echo rma_img($image,'grid'); ?></figure>
               </a>
             </article>
