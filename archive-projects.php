@@ -39,10 +39,10 @@
               $content = get_fields($id);
               $image = $content['images'][0];
               $title = [];
+              $title[] = get_the_title();
               if ($content['client']) {
                 $title[] = $content['client'];
               }
-              $title[] = get_the_title();
               if ($content['location']) {
                 $title[] = $content['location'];
               }
