@@ -37,12 +37,12 @@
   @media #{$mediaTablet} {
     display: flex;
     flex-flow: row wrap;
-    margin: -#{$gutter} / 2;
+    margin: -#{$gutter} / 4;
 
     article {
       width: 50%;
       flex: 0 0 50%;
-      padding: $gutter / 2;
+      padding: $gutter / 4;
     }
   }
 
