@@ -173,3 +173,9 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
   )
 );
+function modify_project_query( $query ) {
+  if ( $query->is_post_type_archive('projects') && $query->is_main_query() ) {
+    $query->query_vars['posts_per_page'] = -1;
+  }
+}
+add_action( 'pre_get_posts', 'modify_project_query' );

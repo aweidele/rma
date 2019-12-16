@@ -22,11 +22,7 @@
               <li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
             <?php } ?>
               <li>
-                <?php if($layout == 'table') {
-                  $href = explode('?',$_SERVER['REQUEST_URI']);
-                ?>
-                  <a href="<?php echo $href[0]; ?>">Project Grid</a>
-                <?php } else { ?>
+                <?php if($layout != 'table') { ?>
                   <a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a>
                 <?php } ?>
               </li>
