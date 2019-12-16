@@ -69,7 +69,7 @@ gulp.task('sass', function(){
     .pipe(sourcemaps.write())
     .pipe(gcmq())
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(pxtorem(pxtoremOptions))
+    //.pipe(pxtorem(pxtoremOptions))
     .pipe(gulp.dest('assets/css/'))
 });
 

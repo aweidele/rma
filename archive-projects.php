@@ -89,6 +89,7 @@
             ?>
             </tbody>
           </table>
+          <p class="disclaimer">Richard McElhiney was partner-in-charge at previous firm*</p>
         </div>
       <?php } ?>
 
