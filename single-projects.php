@@ -45,7 +45,7 @@
           </h2>
         <?php the_content(); ?>
           <div class="see-also">
-            <h3>See Also</h3>
+            <h3>See also</h3>
             <ul>
             <?php
               if(sizeof($sector)) {
