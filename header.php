@@ -37,7 +37,7 @@
   <div class="cw">
   <header>
     <div>
-      <h1><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
+      <h1><a href="<?php echo get_home_url(); ?>"><?php echo str_replace( 'LLC', '<small>LLC</small>', get_bloginfo('name') ); ?></a></h1>
       <input type="checkbox" id="nav-primary-toggle" class="menu-toggle sr-only">
       <label for="nav-primary-toggle" class="toggle-trigger">
         <span class="ic ic-bars"></span>

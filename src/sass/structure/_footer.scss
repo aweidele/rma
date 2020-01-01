@@ -9,14 +9,14 @@
 
   .company-name {
     font-weight: bold;
+    color: $accent;
   }
 
   a {
     color: $primary;
-    text-decoration: none;
 
     @include hover {
-      //color: $accent;
+      color: $accent;
     }
   }
 
