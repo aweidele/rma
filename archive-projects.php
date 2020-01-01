@@ -76,11 +76,12 @@
               foreach($sector as $s) {
                 $sectorNames[] = $s->name;
               }
+              $prev_firm = get_field('prev_firm');
             ?>
               <tr>
                 <td>
                   <a href="<?php echo get_permalink(); ?>">
-                    <h2><?php the_title(); ?></h2>
+                    <h2><?php the_title(); ?><?php if($prev_firm) { echo "<span> *</span>"; } ?></h2>
                     <div><?php echo get_field('location'); ?></div>
                   </a>
                 </td>
@@ -94,7 +95,7 @@
             ?>
             </tbody>
           </table>
-          <p class="disclaimer">Richard McElhiney was partner-in-charge at previous firm*</p>
+          <p class="disclaimer">*Richard McElhiney completed at previous firm. </p>
         </div>
       <?php } ?>
 
