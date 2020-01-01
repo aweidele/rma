@@ -71,7 +71,7 @@
             "key": "field_5dd4ad522a6e3",
             "label": "Date",
             "name": "date",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -84,9 +84,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": 1900,
-            "max": 2200,
-            "step": ""
+            "maxlength": ""
         },
         {
             "key": "field_5ddb3f4eada58",
@@ -144,5 +142,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577902384
+    "modified": 1577902730
 }
