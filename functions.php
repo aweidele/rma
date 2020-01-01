@@ -177,5 +177,10 @@ function modify_project_query( $query ) {
   if ( $query->is_post_type_archive('projects') && $query->is_main_query() ) {
     $query->query_vars['posts_per_page'] = -1;
   }
+
+  if ( !isset($_GET['layout']) || $_GET['layout'] != 'table' ) {
+    // $query->query_vars['meta_key'] = 'client';
+    // $query->query_vars['meta_value'] = 'Client Name';
+  }
 }
 add_action( 'pre_get_posts', 'modify_project_query' );
