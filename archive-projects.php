@@ -72,7 +72,9 @@
             </thead>
             <tbody>
             <?php
+            $k = 0;
               if ( have_posts() ) : while ( have_posts() ) : the_post();
+              $k++;
               $sector = get_the_terms($post->ID,'industry');
               $sectorNames = [];
               foreach($sector as $s) {

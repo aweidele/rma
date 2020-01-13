@@ -181,11 +181,17 @@ function modify_project_query( $query ) {
       && $query->is_main_query()
   ) {
     $query->query_vars['posts_per_page'] = -1;
+    if ( !isset($_GET['layout']) || $_GET['layout'] != 'table' ) {
+      $query->query_vars['meta_query'] = [
+        [
+          'key'     => 'appear_in_grid',
+          'value'   => 1,
+          'compare' => 'LIKE'
+        ]
+      ];
+    }
   }
 
-  if ( !isset($_GET['layout']) || $_GET['layout'] != 'table' ) {
-    // $query->query_vars['meta_key'] = 'client';
-    // $query->query_vars['meta_value'] = 'Client Name';
-  }
+
 }
 add_action( 'pre_get_posts', 'modify_project_query' );
