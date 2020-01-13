@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  $_SESSION['current_ind'] = null;
   get_header();
 
   if(isset($_GET['layout'])) {

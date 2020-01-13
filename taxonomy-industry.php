@@ -1,8 +1,11 @@
 <?php
+  session_start();
   get_header();
 
   $thisterm = get_queried_object();
   $thistermID = $thisterm->term_id;
+
+  $_SESSION['current_ind'] = $thisterm->slug;
 
   $terms = get_terms( array(
     'taxonomy' => 'industry',

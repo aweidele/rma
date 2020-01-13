@@ -1,12 +1,15 @@
 <?php
   $content = get_fields();
+  session_start();
   get_header();
 
-  $project_list = get_posts([
+  $np_args = [
     'post_type' => 'projects',
     'posts_per_page' => -1,
     'order_by' => 'menu_order'
-  ]);
+  ];
+
+  $project_list = get_posts($np_args);
 
   foreach($project_list as $key => $proj) {
     if ($post->ID == $proj->ID) {
@@ -25,6 +28,7 @@
     $next = 0;
   }
 ?>
+<!-- pre><?php print_r($_SESSION); ?></pre -->
 <main>
   <div>
     <nav>
@@ -77,7 +81,9 @@
         ?>
           <figure>
             <?php echo rma_img($image,$size); ?>
+            <?php if($key == 0) { ?>
             <figcaption><?php echo $image['caption']; ?></figcaption>
+            <?php } ?>
           </figure>
         <?php } ?>
         </div>
