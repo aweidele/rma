@@ -174,7 +174,12 @@ if ( function_exists('register_sidebar') )
   )
 );
 function modify_project_query( $query ) {
-  if ( $query->is_post_type_archive('projects') && $query->is_main_query() ) {
+  if ( (
+      $query->is_post_type_archive('projects')
+      || $query->is_tax('industry')
+      )
+      && $query->is_main_query()
+  ) {
     $query->query_vars['posts_per_page'] = -1;
   }
 
