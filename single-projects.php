@@ -9,6 +9,16 @@
     'order_by' => 'menu_order'
   ];
 
+  if( isset($_SESSION['current_ind']) && $_SESSION['current_ind'] != '' ) {
+    $np_args['tax_query'] = [
+      [
+        'taxonomy' => 'industry',
+        'field'    => 'slug',
+        'terms'    => $_SESSION['current_ind'],
+      ]
+    ];
+  }
+
   $project_list = get_posts($np_args);
 
   foreach($project_list as $key => $proj) {
@@ -28,7 +38,6 @@
     $next = 0;
   }
 ?>
-<!-- pre><?php print_r($_SESSION); ?></pre -->
 <main>
   <div>
     <nav>
