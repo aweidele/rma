@@ -21,7 +21,11 @@
           <ul>
             <li><a href="<?php echo get_post_type_archive_link('projects'); ?>" class="active">All</a></li>
             <?php foreach($terms as $term) { ?>
-              <li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
+              <li><a href="<?php echo get_term_link($term->term_id); ?><?php
+                if( $layout == 'table' ) {
+                  echo '?layout=table';
+                }
+              ?>"><?php echo $term->name; ?></a></li>
             <?php } ?>
               <li>
                 <?php if($layout != 'table') { ?>
