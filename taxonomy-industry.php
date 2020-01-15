@@ -26,12 +26,12 @@
               <li><a href="<?php echo get_post_type_archive_link('projects'); ?>">All</a></li>
             <?php foreach($terms as $term) { ?>
               <li><a href="<?php echo get_term_link($term->term_id); ?><?php
-                if( isset( $_GET['layout'] ) && $_GET['layout'] == 'table' ) {
+                if( $layout == 'table' ) {
                   echo '?layout=table';
                 }
               ?>"<?php if($term->term_id == $thistermID) { echo ' class="active"'; } ?>><?php echo $term->name; ?></a></li>
             <?php } ?>
-              <li><a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a></li>
+              <li><a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full Project List</a></li>
           </ul>
         </nav>
       </div>
