@@ -85,13 +85,18 @@
                 $sectorNames[] = $s->name;
               }
               $prev_firm = get_field('prev_firm');
+              $sig = get_field('appear_in_grid');
             ?>
               <tr>
                 <td>
+                  <?php if($sig) { ?>
                   <a href="<?php echo get_permalink(); ?>">
+                  <?php } ?>
                     <h2><?php the_title(); ?><?php if($prev_firm) { echo "<span> *</span>"; } ?></h2>
                     <div><?php echo get_field('location'); ?></div>
+                  <?php if($sig) { ?>
                   </a>
+                  <?php } ?>
                 </td>
                 <td><?php echo get_field('client'); ?></td>
                 <td><?php echo get_field('date'); ?></td>
