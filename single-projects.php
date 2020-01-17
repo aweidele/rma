@@ -54,8 +54,8 @@
         ?>
           <h2>
             <?php the_title(); ?>
-            <small><?php echo $content['location']; ?></small>
             <small><?php echo $content['client']; ?></small>
+            <small><?php echo $content['location']; ?></small>
           </h2>
         <?php the_content(); ?>
           <div class="see-also">
