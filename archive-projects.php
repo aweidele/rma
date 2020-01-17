@@ -16,7 +16,7 @@
   <div>
     <div class="main-content">
       <div>
-        <h2>Selected Projects</h2>
+        <h2><?php if( $layout == 'table' ) { ?>Full Project List<?php } else { ?>Selected Projects<?php } ?></h2>
         <nav class="tax-list">
           <ul>
             <li><a href="<?php echo get_post_type_archive_link('projects'); ?>" class="active">All</a></li>
@@ -28,7 +28,9 @@
               ?>"><?php echo $term->name; ?></a></li>
             <?php } ?>
               <li>
-                <?php if($layout != 'table') { ?>
+                <?php if($layout == 'table') { ?>
+                  <a href="<?php echo get_post_type_archive_link('projects'); ?>">Selected Project Grid</a>
+                <?php } else { ?>
                   <a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a>
                 <?php } ?>
               </li>

@@ -20,7 +20,7 @@
   <div>
     <div class="main-content">
       <div>
-        <h2>Selected Projects</h2>
+        <h2><?php if( $layout == 'table' ) { ?>Full Project List<?php } else { ?>Selected Projects<?php } ?></h2>
         <nav class="tax-list">
           <ul>
               <li><a href="<?php echo get_post_type_archive_link('projects'); ?>">All</a></li>
@@ -31,7 +31,13 @@
                 }
               ?>"<?php if($term->term_id == $thistermID) { echo ' class="active"'; } ?>><?php echo $term->name; ?></a></li>
             <?php } ?>
-              <li><a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full Project List</a></li>
+              <li>
+              <?php if($layout == 'table') { ?>
+                <a href="<?php echo get_term_link($thistermID); ?>">Selected Project Grid</a>
+              <?php } else { ?>
+                <a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full Project List</a>
+              <?php } ?>
+              </li>
           </ul>
         </nav>
       </div>
