@@ -101,7 +101,11 @@
   }
 
   figure {
-    padding-bottom: 24px;
+    padding-bottom: $gutter / 2;
+    
+    @media #{$mediaTablet} {
+      padding-bottom: 24px;
+    }
   }
 
   figcaption {

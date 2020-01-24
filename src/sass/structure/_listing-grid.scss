@@ -16,6 +16,11 @@
     text-shadow: 0px 0px 3px $black;
     background: $gray1;
     overflow: hidden;
+    margin-bottom: $gutter / 2;
+
+    @media #{$mediaTablet} {
+      margin: 0;
+    }
 
     @include hover {
       img {

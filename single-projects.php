@@ -96,7 +96,7 @@
         ?>
           <figure>
             <?php echo rma_img($image,$size); ?>
-            <?php if($key == 0) { ?>
+            <?php if($key == 0 && $image['caption'] != '') { ?>
             <figcaption><?php echo $image['caption']; ?></figcaption>
             <?php } ?>
           </figure>
