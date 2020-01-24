@@ -52,6 +52,17 @@
       }
     }
 
+    &.sector {
+      div:after {
+        display: none;
+      }
+
+      @include hover {
+        color: $primary;
+        cursor: auto;
+      }
+    }
+
     &[aria-sort="ascending"],
     &[aria-sort="descending"] {
       color: $accent;
@@ -102,7 +113,7 @@
 
   figure {
     padding-bottom: $gutter / 2;
-    
+
     @media #{$mediaTablet} {
       padding-bottom: 24px;
     }
