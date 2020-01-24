@@ -23,7 +23,7 @@
         <h2><?php if( $layout == 'table' ) { ?>Full Project List<?php } else { ?>Selected Projects<?php } ?></h2>
         <nav class="tax-list">
           <ul>
-              <li><a href="<?php echo get_post_type_archive_link('projects'); ?>">All</a></li>
+              <li><a href="<?php echo get_post_type_archive_link('projects'); ?><?php if( $layout == 'table' ) { echo '?layout=table'; } ?>">All</a></li>
             <?php foreach($terms as $term) { ?>
               <li><a href="<?php echo get_term_link($term->term_id); ?><?php
                 if( $layout == 'table' ) {
@@ -33,9 +33,9 @@
             <?php } ?>
               <li>
               <?php if($layout == 'table') { ?>
-                <a href="<?php echo get_term_link($thistermID); ?>">Selected Project Grid</a>
+                <a href="<?php echo get_term_link($thistermID); ?>">Return to Selected <?php echo $thisterm->name; ?> Projects</a>
               <?php } else { ?>
-                <a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full Project List</a>
+                <a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full <?php echo $thisterm->name; ?>  Project List</a>
               <?php } ?>
               </li>
           </ul>

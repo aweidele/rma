@@ -38,7 +38,7 @@
       align-items: center;
       padding-right: $gutter;
 
-      &:before {
+      &:after {
         width: 0;
         height: 0;
         border-style: solid;
@@ -48,7 +48,7 @@
         opacity: .5;
         transition: all .25s;
         transform: rotate(180deg);
-        margin-right: $gutter / 4;
+        margin-left: $gutter / 4;
       }
     }
 
@@ -69,6 +69,7 @@
 
   td {
     padding: 1em 0;
+    vertical-align: top;
     &,
     h2 {
       font-size: 11px;
@@ -92,6 +93,7 @@
 }
 
 .project-images {
+  padding-top: 15px;
   img {
     width: 100%;
     height: auto;

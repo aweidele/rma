@@ -6,9 +6,13 @@
   $np_args = [
     'post_type' => 'projects',
     'posts_per_page' => -1,
-    'order_by' => 'menu_order'
+    'order_by' => 'menu_order',
+    'meta_query' => [
+      'key'     => 'appear_in_grid',
+      'value'   => 1,
+      'compare' => 'LIKE'
+    ]
   ];
-
   if( isset($_SESSION['current_ind']) && $_SESSION['current_ind'] != '' ) {
     $np_args['tax_query'] = [
       [
@@ -38,6 +42,7 @@
     $next = 0;
   }
 ?>
+
 <main>
   <div>
     <nav>
