@@ -179,6 +179,7 @@ function modify_project_query( $query ) {
       || $query->is_tax('industry')
       )
       && $query->is_main_query()
+      && !is_admin()
   ) {
     $query->query_vars['posts_per_page'] = -1;
     if ( !isset($_GET['layout']) || $_GET['layout'] != 'table' ) {
