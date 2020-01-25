@@ -8,9 +8,11 @@
     'posts_per_page' => -1,
     'order_by' => 'menu_order',
     'meta_query' => [
-      'key'     => 'appear_in_grid',
-      'value'   => 1,
-      'compare' => 'LIKE'
+	  [
+        'key'     => 'appear_in_grid',
+        'value'   => 1,
+        'compare' => 'LIKE'
+	  ]
     ]
   ];
   if( isset($_SESSION['current_ind']) && $_SESSION['current_ind'] != '' ) {
@@ -42,7 +44,6 @@
     $next = 0;
   }
 ?>
-
 <main>
   <div>
     <nav>
