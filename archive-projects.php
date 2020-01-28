@@ -29,7 +29,7 @@
             <?php } ?>
               <li>
                 <?php if($layout == 'table') { ?>
-                  <a href="<?php echo get_post_type_archive_link('projects'); ?>">Return to Selected Projects</a>
+                  <a href="<?php echo get_post_type_archive_link('projects'); ?>">Go to Selected Projects</a>
                 <?php } else { ?>
                   <a href="<?php echo get_post_type_archive_link('projects'); ?>?layout=table">Full Project List</a>
                 <?php } ?>

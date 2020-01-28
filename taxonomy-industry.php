@@ -33,7 +33,7 @@
             <?php } ?>
               <li>
               <?php if($layout == 'table') { ?>
-                <a href="<?php echo get_term_link($thistermID); ?>">Return to Selected <?php echo $thisterm->name; ?> Projects</a>
+                <a href="<?php echo get_term_link($thistermID); ?>">Go to Selected <?php echo $thisterm->name; ?> Projects</a>
               <?php } else { ?>
                 <a href="<?php echo get_term_link($thistermID); ?>?layout=table">Full <?php echo $thisterm->name; ?>  Project List</a>
               <?php } ?>
