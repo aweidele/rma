@@ -190,6 +190,10 @@ function modify_project_query( $query ) {
           'compare' => 'LIKE'
         ]
       ];
+    } else {
+      $query->query_vars['meta_key'] = 'date';
+      $query->query_vars['orderby'] = 'meta_value';
+      $query->query_vars['order'] = 'DESC';
     }
   }
 
