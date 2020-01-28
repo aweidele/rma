@@ -46,6 +46,24 @@
   }
 }
 
+
+@media #{$mediaPhone} {
+  .hp-grid {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      order: 16;
+    }
+  }
+
+  @for $i from 1 through 15 {
+    .mo_#{$i} {
+      order: $i;
+    }
+  }
+}
+
 .menu-link {
   position: relative;
   background: $gray1;

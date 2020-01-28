@@ -5,6 +5,10 @@
     $block['title_placement'],
     $block['title_direction']
   ];
+
+  if($block['mobile_order']) {
+    $classes[] = 'mo_'.$block['mobile_order'];
+  }
 ?>
 <a href="<?php echo $block['link']['url']; ?>" class="<?php echo implode($classes, ' '); ?>">
   <?php

@@ -66,7 +66,7 @@ gulp.task('sass', function(){
     .src('src/sass/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gcmq())
     .pipe(autoprefixer(autoprefixerOptions))
     //.pipe(pxtorem(pxtoremOptions))
