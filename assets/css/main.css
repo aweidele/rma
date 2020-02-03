@@ -486,6 +486,10 @@ p {
   margin-bottom: .2em;
 }
 
+.see-also ul li:last-child:not(:first-child) {
+  margin-top: 2em;
+}
+
 .see-also ul a {
   color: #696A6D;
 }

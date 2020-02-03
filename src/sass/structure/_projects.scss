@@ -234,6 +234,10 @@
 
     li {
       margin-bottom: .2em;
+
+      &:last-child:not(:first-child) {
+        margin-top: 2em;
+      }
     }
 
     a {
