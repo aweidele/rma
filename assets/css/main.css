@@ -601,15 +601,11 @@ p {
   overflow: auto;
   z-index: 9999;
   display: none;
+  padding: 20px;
 }
 
 .dialog-open .dialog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
 }
 
 .dialog .dialog-inner {
@@ -629,6 +625,10 @@ p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.dialog .dialog-content {
+  width: 100%;
 }
 
 .cw .dialog .main-content > div:first-child {

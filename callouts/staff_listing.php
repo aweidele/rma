@@ -5,9 +5,9 @@
     $id = $s->ID;
     $fields = get_fields($id);
   ?>
-  <article>
+  <article aria-labelledby="<?php echo $s->post_name; ?>">
     <a href="<?php echo get_permalink($id); ?>">
-      <h2><?php echo $s->post_title; ?></h2>
+      <h2 id="<?php echo $s->post_name; ?>"><?php echo $s->post_title; ?></h2>
       <?php echo rma_img($fields['listing_image'],'grid'); ?>
     </a>
   </article>
