@@ -16,7 +16,5 @@
       $('body').removeClass('dialog-open');
     });
   }
-  new Tablesort(document.getElementById('projectTable'),{
-    descending: true
-  });
+  new Tablesort(document.getElementById('projectTable'));
 })(jQuery);
