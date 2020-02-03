@@ -74,7 +74,7 @@
               <th tabindex="0"><div>Project</div></th>
               <th tabindex="0"><div>Client</div></th>
               <th tabindex="0" data-sort-method="number" data-sort-default><div>Date</div></th>
-              <th class="sector" tabindex="-1"><div>Sector</div></th>
+              <th class="sector" data-sort-method='none'><div>Sector</div></th>
             </thead>
             <tbody>
             <?php
