@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/aweidele/central_moving#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-iconfont": "^10.0.2",
